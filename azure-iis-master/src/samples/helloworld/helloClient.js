@@ -1,1 +1,0 @@
-var hello = "This is a client side JavaScript file served statically";
