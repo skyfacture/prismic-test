@@ -1,1 +1,0 @@
-exports.partVersion = 1;

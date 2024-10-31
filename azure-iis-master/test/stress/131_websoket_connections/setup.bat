@@ -1,1 +1,0 @@
-%systemroot%\system32\inetsrv\appcmd.exe add app /site.name:"Default Web Site" /path:/131_websocket_connections /physicalPath:%~dp0 /applicationPool:DefaultAppPool
