@@ -10,13 +10,15 @@ export default defineStackbitConfig({
      models: [
         {
           name: "Page",
-          type: 'page',
-          urlPath: '/{slug}',
-          filePath: '.next/server/pages/{slug}.tsx', // Ensure this matches your file structure
-          fields: [{ name: 'title', type: 'string', required: true }],
+          type: "page",
+          urlPath: "/{slug}",
+          filePath: ".next/server/pages/{slug}.tsx", // Ensure this matches your file structure
+          fields: [
+            { name: "title", type: "string", required: true },
+            // Add any additional fields here
+          ],
         },
-    }),
-  ],
+       ],
   modelExtensions: [
     {
       name: "Page",
