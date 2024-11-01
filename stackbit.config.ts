@@ -19,12 +19,12 @@ export default defineStackbitConfig({
           ],
         },
       ],
-    }),
-  ],
-  assetsConfig: {
+    assetsConfig: {
     referenceType: "static",
     staticDir: "public", // Ensure this matches your static directory
     uploadDir: "", // Leave this empty if images are directly in the public directory
     publicPath: "/public", // Ensure this matches your public path
-  },
+  }
+})
+]
 });
