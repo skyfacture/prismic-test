@@ -6,13 +6,13 @@ export default defineStackbitConfig({
   contentSources: [
     new GitContentSource({
       rootPath: __dirname,
-      contentDirs: ["pages"], // Adjust this if your content is in a different directory
+      contentDirs: [".next/server/pages"], // Adjusted to point to the correct directory
       models: [
         {
           name: "Page",
           type: "page",
           urlPath: "/{slug}",
-          filePath: "pages/{slug}.tsx", // Adjust this to match your file structure
+          filePath: ".next/server/pages/{slug}.tsx", // Adjusted to match your file structure
           fields: [{ name: "title", type: "string", required: true }]
         }
       ],
