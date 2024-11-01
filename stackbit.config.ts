@@ -16,9 +16,6 @@ export default defineStackbitConfig({
           fields: [{ name: "title", type: "string", required: true }]
         }
       ],
-      modelExtensions: [
-        { name: "page", type: "page", urlPath: "/{slug}" }
-      ],
       assetsConfig: {
         referenceType: "static",
         staticDir: "public", // This should match the directory where your images are stored
