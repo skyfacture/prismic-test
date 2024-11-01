@@ -7,6 +7,14 @@ export default defineStackbitConfig({
     new GitContentSource({
       rootPath: __dirname,
       contentDirs: [".next/server/pages"], // Ensure this path is correct
+      models: {
+        Page: {
+          type: 'page',
+          urlPath: '/{slug}',
+          filePath: '.next/server/pages/{slug}.tsx', // Ensure this matches your file structure
+          fields: [{ name: 'title', type: 'string', required: true }],
+        },
+      },
     }),
   ],
   modelExtensions: [
@@ -14,7 +22,6 @@ export default defineStackbitConfig({
       name: "Page",
       type: "page",
       urlPath: "/{slug}",
-      filePath: ".next/server/pages/{slug}.tsx", // Ensure this matches your file structure
       fields: [
         { name: "title", type: "string", required: true },
         // Add any additional fields here
