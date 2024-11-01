@@ -15,7 +15,6 @@ export default defineStackbitConfig({
           filePath: '.next/server/pages/{slug}.tsx', // Ensure this matches your file structure
           fields: [{ name: 'title', type: 'string', required: true }],
         },
-      },
     }),
   ],
   modelExtensions: [
