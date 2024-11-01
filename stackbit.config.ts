@@ -6,22 +6,32 @@ export default defineStackbitConfig({
   contentSources: [
     new GitContentSource({
       rootPath: __dirname,
-      contentDirs: [".next/server/pages"], // Adjusted to point to the correct directory
+      contentDirs: [".next/server/pages"], // Ensure this path is correct
       models: {
-		Page: {
-			type: 'page',
-			urlPath: '/{slug}',
-			filePath: '.next/server/pages/{slug}.tsx', // Adjusted to match your file structure
-			fields: [{ name: 'title', type: 'string', required: true }],
+        Page: {
+          type: 'page',
+          urlPath: '/{slug}',
+          filePath: '.next/server/pages/{slug}.tsx', // Ensure this matches your file structure
+          fields: [{ name: 'title', type: 'string', required: true }],
+        },
+      },
+    }),
+  ],
+  modelExtensions: [
+    {
+      name: "Page",
+      type: "page",
+      urlPath: "/{slug}",
+      fields: [
+        { name: "title", type: "string", required: true },
+        // Add any additional fields here
+      ],
     },
+  ],
+  assetsConfig: {
+    referenceType: "static",
+    staticDir: "public", // Ensure this matches your static directory
+    uploadDir: "", // Leave this empty if images are directly in the public directory
+    publicPath: "/public", // Ensure this matches your public path
   },
-};
-      assetsConfig: {
-        referenceType: "static",
-        staticDir: "public", // This should match the directory where your images are stored
-        uploadDir: "", // Leave this empty if images are directly in the public directory
-        publicPath: "/public" // Adjust this to match your public path
-      }
-    })
-  ]
 });
