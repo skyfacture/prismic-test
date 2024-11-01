@@ -7,7 +7,7 @@ export default defineStackbitConfig({
     new GitContentSource({
       rootPath: __dirname,
       contentDirs: [".next/server/pages"], // Ensure this path is correct
-     models: [
+      models: [
         {
           name: "Page",
           type: "page",
@@ -18,7 +18,9 @@ export default defineStackbitConfig({
             // Add any additional fields here
           ],
         },
-       ],
+      ],
+    }),
+  ],
   assetsConfig: {
     referenceType: "static",
     staticDir: "public", // Ensure this matches your static directory
