@@ -19,17 +19,6 @@ export default defineStackbitConfig({
           ],
         },
        ],
-  modelExtensions: [
-    {
-      name: "Page",
-      type: "page",
-      urlPath: "/{slug}",
-      fields: [
-        { name: "title", type: "string", required: true },
-        // Add any additional fields here
-      ],
-    },
-  ],
   assetsConfig: {
     referenceType: "static",
     staticDir: "public", // Ensure this matches your static directory
